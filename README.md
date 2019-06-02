@@ -1,6 +1,66 @@
 # meet_network_image
 
-A new Flutter project.
+A dart package that shows an image from the url 
+also it has `loadingBuilder` to show specific 
+widgets when the image loading and it has `errorBuilder` 
+to show specific widget when error occur
+
+```
+MeetNetworkImage({
+    @required this.imageUrl,
+    @required this.loadingBuilder,
+    @required this.errorBuilder,
+    this.scale = 1.0,
+    this.height,
+    this.width,
+    this.color,
+    this.fit,
+    this.alignment = Alignment.center,
+    this.repeat = ImageRepeat.noRepeat,
+    this.semanticLabel,
+    this.centerSlice,
+    this.colorBlendMode,
+    this.excludeFromSemantics = false,
+    this.filterQuality = FilterQuality.low,
+    this.matchTextDirection = false,
+    this.gaplessPlayback = false,
+  }) 
+```
+
+# example
+
+```
+import 'package:flutter/material.dart';
+import 'package:meet_network_image/meet_network_image.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        body: Container(
+          child: MeetNetworkImage(
+              imageUrl:
+                  "https://random.dog/3f62f2c1-e0cb-4077-8cd9-1ca76bfe98d5.jpg",
+              loadingBuilder: (context) => Center(
+                    child: CircularProgressIndicator(),
+                  ),
+              errorBuilder: (context, e) => Center(
+                    child: Text('Error appear!' + e),
+                  )),
+        ),
+      ),
+    );
+  }
+}
+
+```
 
 ## Getting Started
 
