@@ -1,8 +1,8 @@
 name: meet_network_image
-description: A new Flutter project.
+description: A flutter package for showing Image from Url with LoadingBuilder and ErrorBuilder.
 version: 0.0.1
-author: Onat Cipli
-homepage:
+author: Onat Cipli<ciplionat35@gmail.com>
+homepage: https://github.com/onatcipli/meet_network_image
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

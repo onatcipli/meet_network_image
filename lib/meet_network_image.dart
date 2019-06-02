@@ -1,7 +1,6 @@
 library meet_network_image;
 
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 import 'package:http/http.dart' as http;
 
 /// Builds a widget when the connectionState is none and waiting

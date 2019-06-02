@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 2019-06-03
 
-* TODO: Describe initial release.
+* MeetNetworkImage has LoadingBuilder
+* MeetNetworkImage has ErrorBuilder
+* Other Image.network properties.
