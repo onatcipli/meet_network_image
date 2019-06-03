@@ -182,6 +182,7 @@ class MeetNetworkImage extends StatelessWidget {
           case ConnectionState.active:
           case ConnectionState.done:
             if (snapshot.hasError) return errorBuilder(context, snapshot.error);
+            if (!snapshot.hasData) return errorBuilder(context, snapshot.error);
             return Image.memory(
               snapshot.data.bodyBytes,
               scale: scale,
