@@ -6,8 +6,7 @@ widgets when the image loading and it has `errorBuilder`
 to show specific widget when error occur
 
 
-![loading image](https://i.stack.imgur.com/qkiEz.png)
-![done image](https://drive.google.com/open?id=1vqaSg-2BdyArOcmJPIZQj-qWcGUEJMsM)
+![CircularIndicator gif](/screenshots/meet.gif)
 
 ```
 MeetNetworkImage({
