@@ -170,10 +170,14 @@ class MeetNetworkImage extends StatelessWidget {
         assert(repeat != null),
         assert(matchTextDirection != null);
 
+  Future<http.Response> getUrlResponse() {
+    return http.get(imageUrl);
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: http.get(imageUrl),
+      future: getUrlResponse(),
       builder: (BuildContext context, AsyncSnapshot<http.Response> snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.none:
