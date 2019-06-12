@@ -6,7 +6,7 @@ widgets when the image loading and it has `errorBuilder`
 to show specific widget when error occur
 
 
-![CircularIndicator gif](/screenshots/meet.gif)
+![CircularIndicator gif](screenshots/meet.gif)
 
 ```
 MeetNetworkImage({
