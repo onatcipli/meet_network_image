@@ -1,3 +1,7 @@
+## [0.1.2] - 2019-11-08
+
+* Package updates and Dart Analysis fixes
+
 ## [0.1.1] - 2019-06-12
 
 * Readme gif fix

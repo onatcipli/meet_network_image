@@ -205,6 +205,7 @@ class MeetNetworkImage extends StatelessWidget {
               semanticLabel: semanticLabel,
             );
         }
+        return Container();
       },
     );
   }

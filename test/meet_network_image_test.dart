@@ -4,7 +4,6 @@ import 'package:http/http.dart' as http;
 
 import 'package:meet_network_image/meet_network_image.dart';
 
-
 void main() {
   test('check response bodyBytes', () async {
     String imageUrl =
@@ -12,8 +11,16 @@ void main() {
 
     MeetNetworkImage meetNetworkImage = MeetNetworkImage(
       imageUrl: imageUrl,
-      loadingBuilder: (BuildContext context) {},
-      errorBuilder: (BuildContext context, Object error) {},
+      loadingBuilder: (BuildContext context) {
+        return Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+      errorBuilder: (BuildContext context, Object error) {
+        return Center(
+          child: Text(error.toString()),
+        );
+      },
     );
 
     var actualResponse = await meetNetworkImage.getUrlResponse();
@@ -22,5 +29,4 @@ void main() {
 
     expect(currentResponse.bodyBytes, actualResponse.bodyBytes);
   });
-
 }
