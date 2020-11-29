@@ -1,3 +1,7 @@
+## [0.1.3] - 2020-11-29
+
+* Null-Safety ready
+
 ## [0.1.2] - 2019-11-08
 
 * Package updates and Dart Analysis fixes
