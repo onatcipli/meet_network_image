@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
-
 import 'package:meet_network_image/meet_network_image.dart';
 
 void main() {
@@ -25,7 +24,7 @@ void main() {
 
     var actualResponse = await meetNetworkImage.getUrlResponse();
 
-    var currentResponse = await http.get(imageUrl);
+    var currentResponse = await http.get(Uri.parse(imageUrl));
 
     expect(currentResponse.bodyBytes, actualResponse.bodyBytes);
   });

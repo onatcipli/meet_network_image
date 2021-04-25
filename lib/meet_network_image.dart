@@ -173,7 +173,7 @@ class MeetNetworkImage extends StatelessWidget {
         assert(matchTextDirection != null);
 
   Future<http.Response> getUrlResponse() {
-    return http.get(imageUrl);
+    return http.get(Uri.parse(imageUrl));
   }
 
   @override
